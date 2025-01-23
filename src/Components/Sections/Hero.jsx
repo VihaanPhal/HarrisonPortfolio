@@ -12,13 +12,13 @@ import {
   headTextAnimation,
 } from "../../utils/motion";
 
-const Image = styled.img`
+const ImageContainer = styled.div`
   width: 100%;
-  height: 100%;
   max-width: 500px;
-  max-height: 500px;
-  object-fit: cover;
+  height: 500px;
+  position: relative;
   border-radius: 24px;
+  overflow: hidden;
   background: linear-gradient(
     315deg,
     rgba(255, 255, 255, 0.05) 0%,
@@ -38,9 +38,16 @@ const Image = styled.img`
 
   @media (max-width: 640px) {
     max-width: 280px;
-    max-height: 280px;
+    height: 280px;
     border-radius: 20px;
   }
+`;
+
+const Image = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top; // This ensures the image is anchored to the top
 `;
 
 const HeroSection = styled.div`
@@ -97,7 +104,6 @@ const HeroLeftSection = styled.div`
 `;
 
 const HeroRightSection = styled.div`
-  padding-bottom: 20px;
   width: 100%;
   order: 2;
   display: flex;
@@ -208,7 +214,9 @@ const Hero = () => {
             <HeroRightSection>
               <motion.div {...headContentAnimation}>
                 <Tilt>
-                  <Image src={HeroImage} alt="Harrison Schulman" />
+                  <ImageContainer>
+                    <Image src={HeroImage} alt="Harrison Schulman" />
+                  </ImageContainer>
                 </Tilt>
               </motion.div>
             </HeroRightSection>
