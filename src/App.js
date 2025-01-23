@@ -11,12 +11,11 @@ import Hero from "./Components/Sections/Hero";
 import { darkTheme } from "./utils/Themes";
 import Skills from "./Components/Sections/Skills";
 import Footer from "./Components/Sections/Footer";
-import Projects from "./Components/Sections/Projects";
+// import Projects from "./Components/Sections/Projects";
 import Education from "./Components/Sections/Education";
 import Experience from "./Components/Sections/Experience";
 import StartCanvas from "./Components/canvas/Stars";
 import Contact from "./Components/Sections/Contact";
-import Resume from "./Components/Resume";
 
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
@@ -62,7 +61,7 @@ function App() {
                       <Skills />
                       <Experience />
                     </Wrapper>
-                    <Projects />
+                    {/* <Projects /> */}
                     <Wrapper>
                       <Education />
                       <Contact />
@@ -74,11 +73,6 @@ function App() {
             </Routes>
           </div>
         </Body>
-      )}
-      {isResumePage && (
-        <Routes>
-          <Route path="/resume" element={<Resume />} />
-        </Routes>
       )}
     </ThemeProvider>
   );

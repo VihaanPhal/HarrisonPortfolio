@@ -14,6 +14,7 @@ const shimmer = keyframes`
 
 const Card = styled(VerticalTimelineElement)`
   .vertical-timeline-element-content {
+    color: white;
     background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
     border-radius: 16px;
     padding: 2rem;

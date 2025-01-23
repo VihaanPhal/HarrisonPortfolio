@@ -28,8 +28,8 @@ const NavbarContainer = styled.div`
 const NavLogo = styled(LinkR)`
   width: 80%;
   padding: 0 6px;
-  font-weight: 500;
-  font-size: 18px;
+  font-weight: 600;
+  font-size: 20px;
   text-decoration: none;
   color: inherit;
 `;
@@ -141,7 +141,7 @@ const Navbar = () => {
   return (
     <Nav>
       <NavbarContainer>
-        <NavLogo to="/">VihaanPhal</NavLogo>
+        <NavLogo to="/">Harrison Shulman</NavLogo>
 
         <MobileIcon onClick={() => setIsOpen(!isOpen)}>
           <MenuRounded style={{ color: "inherit" }} />
@@ -151,7 +151,7 @@ const Navbar = () => {
           <NavLink href="#About">About</NavLink>
           <NavLink href="#Skills">Skills</NavLink>
           <NavLink href="#Experience">Experience</NavLink>
-          <NavLink href="#Projects">Projects</NavLink>
+          {/* <NavLink href="#Projects">Projects</NavLink> */}
           <NavLink href="#Education">Education</NavLink>
         </NavItems>
 
@@ -166,27 +166,30 @@ const Navbar = () => {
             <NavLink onClick={() => setIsOpen(!isOpen)} href="#Experience">
               Experience
             </NavLink>
-            <NavLink onClick={() => setIsOpen(!isOpen)} href="#Projects">
+            {/* <NavLink onClick={() => setIsOpen(!isOpen)} href="#Projects">
               Projects
-            </NavLink>
+            </NavLink> */}
             <NavLink onClick={() => setIsOpen(!isOpen)} href="#Education">
               Education
             </NavLink>
             <GithubButton
-              href="https://github.com/VihaanPhal"
+              href="https://www.linkedin.com/in/harrison-shulman-17102b101/"
               target="_Blank"
               style={{
                 color: theme.text_primary,
               }}
             >
-              Github Profile
+              Linkedin Profile
             </GithubButton>
           </MobileMenu>
         )}
 
         <ButtonContainer>
-          <GithubButton href="https://github.com/VihaanPhal" target="_Blank">
-            Github Profile
+          <GithubButton
+            href="https://www.linkedin.com/in/harrison-shulman-17102b101/"
+            target="_Blank"
+          >
+            Linkedin Profile
           </GithubButton>
         </ButtonContainer>
       </NavbarContainer>
