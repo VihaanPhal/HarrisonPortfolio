@@ -49,16 +49,24 @@ const HeroSection = styled.div`
   position: relative;
   padding: 80px 30px;
   z-index: 1;
+  background: ${({ theme }) => theme.bg};
+
   @media (max-width: 960px) {
     padding: 66px 16px;
   }
 
   @media (max-width: 640px) {
     padding: 32px 16px;
+    min-height: 100vh;
   }
 
   clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 95%, 0 100%);
+
+  @media (max-width: 640px) {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 98%, 0 100%);
+  }
 `;
+
 const HeroInnerSection = styled.div`
   position: relative;
   display: flex;
@@ -66,39 +74,40 @@ const HeroInnerSection = styled.div`
   align-items: center;
   width: 100%;
   max-width: 1100px;
+  gap: 30px;
 
   @media (max-width: 960px) {
     flex-direction: column;
+    gap: 40px;
   }
 `;
-const HeroLeftSecion = styled.div`
+
+const HeroLeftSection = styled.div`
   width: 100%;
   order: 1;
+
   @media (max-width: 960px) {
     order: 2;
-    margin-bottom: 30px;
     display: flex;
-    gap: 6px;
     flex-direction: column;
     align-items: center;
+    gap: 20px;
+    margin-top: -60px;
   }
 `;
+
 const HeroRightSection = styled.div`
+  padding-bottom: 20px;
   width: 100%;
   order: 2;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
+
   @media (max-width: 960px) {
     order: 1;
-    display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    justify-contents: center;
-    margin-bottom: 80px;
-  }
-
-  @media (max-width: 640px) {
-    margin-bottom: 30px;
+    margin-top: 40px;
   }
 `;
 
@@ -110,12 +119,14 @@ const Title = styled.div`
 
   @media (max-width: 960px) {
     text-align: center;
-  }
-
-  @media (max-width: 960px) {
     font-size: 40px;
     line-height: 48px;
-    margin-bottom: 8px;
+  }
+
+  @media (max-width: 640px) {
+    font-size: 35px;
+    line-height: 42px;
+    margin-bottom: -15px;
   }
 `;
 
@@ -129,12 +140,14 @@ const TextLoop = styled.div`
 
   @media (max-width: 960px) {
     text-align: center;
-  }
-
-  @media (max-width: 960px) {
     font-size: 22px;
     line-height: 48px;
-    margin-bottom: 16px;
+  }
+
+  @media (max-width: 640px) {
+    font-size: 20px;
+    line-height: 36px;
+    margin-bottom: 10px;
   }
 `;
 
@@ -151,11 +164,13 @@ const Subtitle = styled.div`
 
   @media (max-width: 960px) {
     text-align: center;
-  }
-
-  @media (max-width: 960px) {
     font-size: 16px;
     line-height: 32px;
+  }
+
+  @media (max-width: 640px) {
+    font-size: 14px;
+    line-height: 26px;
   }
 `;
 
@@ -167,7 +182,7 @@ const Hero = () => {
       <HeroSection>
         <motion.div {...headContainerAnimation}>
           <HeroInnerSection>
-            <HeroLeftSecion>
+            <HeroLeftSection>
               <motion.div {...headTextAnimation}>
                 <Title>
                   Hi, I am <br /> {Bio.name}
@@ -189,7 +204,7 @@ const Hero = () => {
               <motion.div {...headContentAnimation}>
                 <Subtitle>{Bio.description}</Subtitle>
               </motion.div>
-            </HeroLeftSecion>
+            </HeroLeftSection>
             <HeroRightSection>
               <motion.div {...headContentAnimation}>
                 <Tilt>
