@@ -85,7 +85,7 @@ const Footer = () => {
   return (
     <FooterContainer>
       <FooterWrapper>
-        <Logo>Vihaan Deepak Phal</Logo>
+        <Logo>Harrison Shulman</Logo>
         <Nav>
           <NavLink href="#About">About</NavLink>
           <NavLink href="#Skills">Skills</NavLink>
@@ -108,7 +108,7 @@ const Footer = () => {
           </SocialMediaIcon>
         </SocialMediaIcons>
         <Copyright>
-          &copy; 2024 Vihaan Deepak Phal. All rights reserved.
+          &copy; 2024 Harrison Shulman. All rights reserved.
         </Copyright>
       </FooterWrapper>
     </FooterContainer>

@@ -432,7 +432,7 @@ function AppWrapper() {
       <Helmet>
         <meta charSet="utf-8" />
         <title>Harrison Shulman</title>
-        <link rel="canonical" href="http://vihaanphal.vercel.app" />
+        <link rel="canonical" href="https://harrison-nine.vercel.app/" />
       </Helmet>
       <App />
     </Router>
