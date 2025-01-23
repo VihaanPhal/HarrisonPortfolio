@@ -104,6 +104,7 @@ const HeroLeftSection = styled.div`
 `;
 
 const HeroRightSection = styled.div`
+  padding-bottom: 30px;
   width: 100%;
   order: 2;
   display: flex;
