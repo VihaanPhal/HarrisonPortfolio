@@ -370,10 +370,10 @@ function App() {
                     <Hero />
                     <Wrapper>
                       <Skills />
-                      <Experience />
+                      <Education />
                     </Wrapper>
                     <Wrapper>
-                      <Education />
+                      <Experience />
                       <Contact />
                     </Wrapper>
                     <Footer />

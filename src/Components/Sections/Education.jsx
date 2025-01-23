@@ -4,7 +4,7 @@ import "react-vertical-timeline-component/style.min.css";
 import styled from "styled-components";
 import { education } from "../../Data/Constants";
 import EducationCard from "../cards/EducationCard";
-import EarthCanvas from "../canvas/Earth";
+
 
 const Container = styled.div`
   display: flex;
@@ -68,7 +68,6 @@ const Education = () => {
             <EducationCard key={`education-${index}`} education={education} />
           ))}
         </VerticalTimeline>
-        <EarthCanvas />
       </Wrapper>
     </Container>
   );

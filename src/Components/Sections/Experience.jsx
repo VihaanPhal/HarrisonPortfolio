@@ -4,7 +4,7 @@ import "react-vertical-timeline-component/style.min.css";
 import styled from "styled-components";
 import { experiences } from "../../Data/Constants";
 import ExperienceCard from "../cards/ExperienceCard";
-
+import EarthCanvas from "../canvas/Earth";
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -72,6 +72,7 @@ const Experience = () => {
           ))}
         </VerticalTimeline>
       </Wrapper>
+      <EarthCanvas />
     </Container>
   );
 };
